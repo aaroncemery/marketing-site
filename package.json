@@ -10,6 +10,8 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "husky": "^9.1.7",
@@ -29,6 +31,11 @@
     ],
     "*.{json,md}": [
       "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
