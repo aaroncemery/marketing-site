@@ -1,5 +1,7 @@
 import type { PortableTextBlock } from 'next-sanity';
 import slugify from 'slugify';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export const isRelativeUrl = (url: string) =>
   url.startsWith('/') || url.startsWith('#') || url.startsWith('?');
@@ -52,4 +54,8 @@ export function convertToSlug(
 export function parseChildernToSlug(children: PortableTextBlock['children']) {
   if (!children) return '';
   return convertToSlug(children.map((child) => child.text).join(''));
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
