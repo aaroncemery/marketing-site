@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
-import type { Maybe } from '@/types';
-import { capitalize } from '@/utils';
+import type { Maybe } from '@/lib/types';
+import { capitalize } from '@/lib/utils';
 
-import { getBaseUrl } from '@/config';
+import { getBaseUrl } from '@/lib/config';
 import { client } from '@/lib/sanity/client';
 import { queryGlobalSeoSettings } from './sanity/query';
 

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { getBaseUrl } from '@/config';
+import { getBaseUrl } from '@/lib/config';
 
 const baseUrl = getBaseUrl();
 

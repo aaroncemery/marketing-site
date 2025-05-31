@@ -1,4 +1,4 @@
-import type { QueryHomePageDataResult } from './lib/sanity/sanity.types';
+import type { QueryHomePageDataResult } from './sanity/sanity.types';
 
 export type PageBuilderBlockTypes = NonNullable<
   NonNullable<QueryHomePageDataResult>['pageBuilder']

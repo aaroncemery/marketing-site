@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { getBaseUrl } from '@/config';
+import { getBaseUrl } from '@/lib/config';
 import { client } from '@/lib/sanity/client';
 import { querySitemapData } from '@/lib/sanity/query';
 
