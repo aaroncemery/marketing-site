@@ -9,7 +9,7 @@ export type PagebuilderType<T extends PageBuilderBlockTypes> = Extract<
   { _type: T }
 >;
 
-export type SanityButtonsProps = NonNullable<
+export type SanityButtonProps = NonNullable<
   NonNullable<PagebuilderType<'hero'>>['buttons']
 >[number];
 
