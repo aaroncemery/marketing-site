@@ -137,6 +137,54 @@ export type FaqAccordion = {
   }>;
 };
 
+export type FeatureCardsIcon = {
+  _type: 'featureCardsIcon';
+  eyebrow?: string;
+  title?: string;
+  richText?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: 'span';
+      _key: string;
+    }>;
+    style?: 'normal' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline';
+    listItem?: 'number' | 'bullet';
+    markDefs?: Array<{
+      customLink?: CustomUrl;
+      _type: 'customLink';
+      _key: string;
+    }>;
+    level?: number;
+    _type: 'block';
+    _key: string;
+  }>;
+  cards?: Array<{
+    icon?: IconPicker;
+    title?: string;
+    richText?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: 'span';
+        _key: string;
+      }>;
+      style?: 'normal' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline';
+      listItem?: 'number' | 'bullet';
+      markDefs?: Array<{
+        customLink?: CustomUrl;
+        _type: 'customLink';
+        _key: string;
+      }>;
+      level?: number;
+      _type: 'block';
+      _key: string;
+    }>;
+    _type: 'featureCardIcon';
+    _key: string;
+  }>;
+};
+
 export type Cta = {
   _type: 'cta';
   eyebrow?: string;
@@ -344,6 +392,9 @@ export type HomePage = {
       } & Cta)
     | ({
         _key: string;
+      } & FeatureCardsIcon)
+    | ({
+        _key: string;
       } & FaqAccordion)
     | ({
         _key: string;
@@ -478,6 +529,9 @@ export type PageBuilder = Array<
   | ({
       _key: string;
     } & Cta)
+  | ({
+      _key: string;
+    } & FeatureCardsIcon)
   | ({
       _key: string;
     } & FaqAccordion)
@@ -774,6 +828,7 @@ export type AllSanitySchemaTypes =
   | SubscribeNewsletter
   | ImageLinkCards
   | FaqAccordion
+  | FeatureCardsIcon
   | Cta
   | Hero
   | Navbar
@@ -934,6 +989,54 @@ export type QueryHomePageDataResult = {
                 markDefs: null;
               }
           > | null;
+        }>;
+      }
+    | {
+        _key: string;
+        _type: 'featureCardsIcon';
+        eyebrow?: string;
+        title?: string;
+        richText?: Array<{
+          children?: Array<{
+            marks?: Array<string>;
+            text?: string;
+            _type: 'span';
+            _key: string;
+          }>;
+          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+          listItem?: 'bullet' | 'number';
+          markDefs?: Array<{
+            customLink?: CustomUrl;
+            _type: 'customLink';
+            _key: string;
+          }>;
+          level?: number;
+          _type: 'block';
+          _key: string;
+        }>;
+        cards?: Array<{
+          icon?: IconPicker;
+          title?: string;
+          richText?: Array<{
+            children?: Array<{
+              marks?: Array<string>;
+              text?: string;
+              _type: 'span';
+              _key: string;
+            }>;
+            style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+            listItem?: 'bullet' | 'number';
+            markDefs?: Array<{
+              customLink?: CustomUrl;
+              _type: 'customLink';
+              _key: string;
+            }>;
+            level?: number;
+            _type: 'block';
+            _key: string;
+          }>;
+          _type: 'featureCardIcon';
+          _key: string;
         }>;
       }
     | {
@@ -1315,6 +1418,54 @@ export type QuerySlugPageDataResult = {
       }
     | {
         _key: string;
+        _type: 'featureCardsIcon';
+        eyebrow?: string;
+        title?: string;
+        richText?: Array<{
+          children?: Array<{
+            marks?: Array<string>;
+            text?: string;
+            _type: 'span';
+            _key: string;
+          }>;
+          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+          listItem?: 'bullet' | 'number';
+          markDefs?: Array<{
+            customLink?: CustomUrl;
+            _type: 'customLink';
+            _key: string;
+          }>;
+          level?: number;
+          _type: 'block';
+          _key: string;
+        }>;
+        cards?: Array<{
+          icon?: IconPicker;
+          title?: string;
+          richText?: Array<{
+            children?: Array<{
+              marks?: Array<string>;
+              text?: string;
+              _type: 'span';
+              _key: string;
+            }>;
+            style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+            listItem?: 'bullet' | 'number';
+            markDefs?: Array<{
+              customLink?: CustomUrl;
+              _type: 'customLink';
+              _key: string;
+            }>;
+            level?: number;
+            _type: 'block';
+            _key: string;
+          }>;
+          _type: 'featureCardIcon';
+          _key: string;
+        }>;
+      }
+    | {
+        _key: string;
         _type: 'hero';
         badge?: string;
         title?: string;
@@ -1682,6 +1833,54 @@ export type QueryBlogIndexPageDataResult = {
                 markDefs: null;
               }
           > | null;
+        }>;
+      }
+    | {
+        _key: string;
+        _type: 'featureCardsIcon';
+        eyebrow?: string;
+        title?: string;
+        richText?: Array<{
+          children?: Array<{
+            marks?: Array<string>;
+            text?: string;
+            _type: 'span';
+            _key: string;
+          }>;
+          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+          listItem?: 'bullet' | 'number';
+          markDefs?: Array<{
+            customLink?: CustomUrl;
+            _type: 'customLink';
+            _key: string;
+          }>;
+          level?: number;
+          _type: 'block';
+          _key: string;
+        }>;
+        cards?: Array<{
+          icon?: IconPicker;
+          title?: string;
+          richText?: Array<{
+            children?: Array<{
+              marks?: Array<string>;
+              text?: string;
+              _type: 'span';
+              _key: string;
+            }>;
+            style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
+            listItem?: 'bullet' | 'number';
+            markDefs?: Array<{
+              customLink?: CustomUrl;
+              _type: 'customLink';
+              _key: string;
+            }>;
+            level?: number;
+            _type: 'block';
+            _key: string;
+          }>;
+          _type: 'featureCardIcon';
+          _key: string;
         }>;
       }
     | {

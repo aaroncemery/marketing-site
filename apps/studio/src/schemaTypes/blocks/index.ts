@@ -1,11 +1,19 @@
 import {cta} from './cta'
 import {faqAccordion} from './faq-accordion'
+import {featureCardsIcon} from './feature-cards-icon'
 import {hero} from './hero'
 import {imageLinkCards} from './image-link-cards'
 import {subscribeNewsletter} from './subscribe-newsletter'
 
 // All blocks
-export const pageBuilderBlocks = [hero, cta, faqAccordion, imageLinkCards, subscribeNewsletter]
+export const pageBuilderBlocks = [
+  hero,
+  cta,
+  featureCardsIcon,
+  faqAccordion,
+  imageLinkCards,
+  subscribeNewsletter,
+]
 
 // Categorized blocks
 export const headerBlocks = [hero, cta]
