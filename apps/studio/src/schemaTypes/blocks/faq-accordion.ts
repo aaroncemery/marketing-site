@@ -38,6 +38,12 @@ export const faqAccordion = defineType({
           description: 'The text for the link',
         }),
         defineField({
+          name: 'description',
+          type: 'string',
+          title: 'Link Description',
+          description: 'A brief description of where the link leads to',
+        }),
+        defineField({
           name: 'url',
           type: 'customUrl',
           title: 'URL',
