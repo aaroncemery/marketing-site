@@ -125,6 +125,7 @@ export type FaqAccordion = {
   subtitle?: string;
   link?: {
     title?: string;
+    description?: string;
     url?: CustomUrl;
   };
   faqs: Array<{
@@ -880,6 +881,7 @@ export type QueryHomePageDataResult = {
         subtitle?: string;
         link: {
           title?: string;
+          description?: string;
           url?: CustomUrl;
           openInNewTab: boolean | null;
           href: string | null;
@@ -1256,6 +1258,7 @@ export type QuerySlugPageDataResult = {
         subtitle?: string;
         link: {
           title?: string;
+          description?: string;
           url?: CustomUrl;
           openInNewTab: boolean | null;
           href: string | null;
@@ -1626,6 +1629,7 @@ export type QueryBlogIndexPageDataResult = {
         subtitle?: string;
         link: {
           title?: string;
+          description?: string;
           url?: CustomUrl;
           openInNewTab: boolean | null;
           href: string | null;

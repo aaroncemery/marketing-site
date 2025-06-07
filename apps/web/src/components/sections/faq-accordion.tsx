@@ -68,7 +68,7 @@ export function FaqAccordion({
                 className="flex items-center gap-2"
               >
                 <p className="text-[15px] font-[500] leading-6">
-                  {link?.title}
+                  {link?.description}
                 </p>
                 <span className="rounded-full border p-1">
                   <ArrowUpRight
