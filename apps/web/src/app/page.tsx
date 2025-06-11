@@ -1,25 +1,27 @@
-import { Button } from '@repo/ui/components/button';
-import { SanityButtons } from '@/components/sanity-buttons';
+import { PageBuilder } from '@/components/pagebuilder';
+import { sanityFetch } from '@/lib/sanity/live';
+import { queryHomePageData } from '@/lib/sanity/query';
+import { getMetaData } from '@/lib/seo';
 
-export default function Page() {
-  return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-        <SanityButtons
-          buttons={[
-            {
-              _key: '1',
-              _type: 'button',
-              text: 'Button',
-              href: '/',
-              openInNewTab: false,
-              variant: 'outline',
-            },
-          ]}
-        />
-      </div>
-    </div>
-  );
+async function fetchHomePageData() {
+  return await sanityFetch({
+    query: queryHomePageData,
+  });
+}
+
+export async function generateMetadata() {
+  const homePageData = await fetchHomePageData();
+  return await getMetaData(homePageData?.data ?? {});
+}
+
+export default async function Page() {
+  const { data: homePageData } = await fetchHomePageData();
+
+  if (!homePageData) {
+    return <div>No home page data</div>;
+  }
+
+  const { _id, _type, pageBuilder } = homePageData ?? {};
+
+  return <PageBuilder pageBuilder={pageBuilder ?? []} id={_id} type={_type} />;
 }

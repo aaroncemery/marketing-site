@@ -1,6 +1,6 @@
 import {defineArrayMember, defineType} from 'sanity'
 
-import {pageBuilderBlocks, headerBlockNames, contentBlockNames, footerBlockNames} from '../blocks'
+import {pageBuilderBlocks, headerBlockNames, contentBlockNames} from '../blocks'
 
 export const pageBuilderBlockTypes = pageBuilderBlocks.map(({name}) => ({
   type: name,
@@ -22,11 +22,6 @@ export const pageBuilder = defineType({
           name: 'content',
           title: 'Content',
           of: contentBlockNames,
-        },
-        {
-          name: 'footer',
-          title: 'Footer',
-          of: footerBlockNames,
         },
       ],
       views: [

@@ -7,7 +7,7 @@ import { SanityButtons } from '@/components/sanity-buttons';
 
 export type CTABlockProps = PagebuilderType<'cta'>;
 
-export function CTABlcok({ richText, title, eyebrow, buttons }: CTABlockProps) {
+export function CTABlock({ richText, title, eyebrow, buttons }: CTABlockProps) {
   return (
     <section id="features" className="my-6 md:my-16">
       <div className="container mx-auto px-4 md:px-8">

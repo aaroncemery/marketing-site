@@ -13,47 +13,6 @@
  */
 
 // Source: schema.json
-export type SubscribeNewsletter = {
-  _type: 'subscribeNewsletter';
-  title?: string;
-  subTitle?: Array<{
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'normal' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline';
-    listItem?: 'number' | 'bullet';
-    markDefs?: Array<{
-      customLink?: CustomUrl;
-      _type: 'customLink';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }>;
-  helperText?: Array<{
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'normal' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline';
-    listItem?: 'number' | 'bullet';
-    markDefs?: Array<{
-      customLink?: CustomUrl;
-      _type: 'customLink';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }>;
-};
-
 export type ImageLinkCards = {
   _type: 'imageLinkCards';
   eyebrow?: string;
@@ -399,9 +358,6 @@ export type HomePage = {
     | ({
         _key: string;
       } & ImageLinkCards)
-    | ({
-        _key: string;
-      } & SubscribeNewsletter)
   >;
   seoTitle?: string;
   seoDescription?: string;
@@ -538,9 +494,6 @@ export type PageBuilder = Array<
   | ({
       _key: string;
     } & ImageLinkCards)
-  | ({
-      _key: string;
-    } & SubscribeNewsletter)
 >;
 
 export type Button = {
@@ -825,7 +778,6 @@ export type SanityAssetSourceData = {
 };
 
 export type AllSanitySchemaTypes =
-  | SubscribeNewsletter
   | ImageLinkCards
   | FaqAccordion
   | FeatureCardsIcon
@@ -1194,65 +1146,6 @@ export type QueryHomePageDataResult = {
           href: string | null;
         }> | null;
       }
-    | {
-        _key: string;
-        _type: 'subscribeNewsletter';
-        title?: string;
-        subTitle: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
-        }> | null;
-        helperText: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
-        }> | null;
-      }
   > | null;
   seoTitle?: string;
   seoDescription?: string;
@@ -1619,65 +1512,6 @@ export type QuerySlugPageDataResult = {
           href: string | null;
         }> | null;
       }
-    | {
-        _key: string;
-        _type: 'subscribeNewsletter';
-        title?: string;
-        subTitle: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
-        }> | null;
-        helperText: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
-        }> | null;
-      }
   > | null;
   seoTitle?: string;
   seoDescription?: string;
@@ -2036,65 +1870,6 @@ export type QueryBlogIndexPageDataResult = {
           _key: string;
           openInNewTab: boolean | null;
           href: string | null;
-        }> | null;
-      }
-    | {
-        _key: string;
-        _type: 'subscribeNewsletter';
-        title?: string;
-        subTitle: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
-        }> | null;
-        helperText: Array<{
-          children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: 'span';
-            _key: string;
-          }>;
-          style?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inline' | 'normal';
-          listItem?: 'bullet' | 'number';
-          markDefs: Array<
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-                openInNewTab: boolean | null;
-                href: string | '#' | null;
-              }
-            | {
-                customLink?: CustomUrl;
-                _type: 'customLink';
-                _key: string;
-              }
-          > | null;
-          level?: number;
-          _type: 'block';
-          _key: string;
         }> | null;
       }
   > | null;
