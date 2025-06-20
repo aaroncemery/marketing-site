@@ -77,6 +77,10 @@ importers:
         version: 5.8.3
 
   apps/sanity-functions:
+    dependencies:
+      '@sanity/functions':
+        specifier: ^1.0.0
+        version: 1.0.2
     devDependencies:
       '@sanity/blueprints':
         specifier: 0.1.0
@@ -2536,6 +2540,10 @@ packages:
   '@sanity/export@3.44.0':
     resolution: {integrity: sha512-InTmE5SWDM2JOXZvyB3whk5dX6udxIFexWl+0vSRPvezfuL+EBhcjPQioC7FPX9co+K5lgRD16G1IygB+YBGyQ==}
     engines: {node: '>=18'}
+
+  '@sanity/functions@1.0.2':
+    resolution: {integrity: sha512-qbLNmrNKn6QH8qjxWsuWZlg+tNzmqDVx0pbRDClgIOSpTFZGH4jhm1WHCoAxj267AJsmQO6+mbOc6tmKmG/vaA==}
+    engines: {node: '>=20'}
 
   '@sanity/generate-help-url@3.0.0':
     resolution: {integrity: sha512-wtMYcV5GIDIhVyF/jjmdwq1GdlK07dRL40XMns73VbrFI7FteRltxv48bhYVZPcLkRXb0SHjpDS/icj9/yzbVA==}
@@ -10587,6 +10595,8 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
+
+  '@sanity/functions@1.0.2': {}
 
   '@sanity/generate-help-url@3.0.0': {}
 
