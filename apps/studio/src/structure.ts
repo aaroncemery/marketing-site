@@ -119,6 +119,12 @@ export const structure = (S: StructureBuilder, context: StructureResolverContext
               }),
               createSingleton({
                 S,
+                type: 'navbar-simple',
+                title: 'Navigation - Simple',
+                icon: PanelTopDashedIcon,
+              }),
+              createSingleton({
+                S,
                 type: 'footer',
                 title: 'Footer',
                 icon: PanelBottomIcon,
