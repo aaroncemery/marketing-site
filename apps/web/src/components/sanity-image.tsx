@@ -1,5 +1,5 @@
 import { getImageDimensions } from '@sanity/asset-utils';
-import { cn } from '@/lib/utils';
+import { cn } from '@repo/ui/lib/utils';
 import Image, { type ImageProps as NextImageProps } from 'next/image';
 
 import { urlFor } from '@/lib/sanity/client';

@@ -1,7 +1,7 @@
 import { Button } from '@repo/ui/components/button';
 import { SanityButtons } from '@/components/sanity-buttons';
 
-export default function Page() {
+export default function Page(): React.ReactElement {
   return (
     <div className="flex items-center justify-center min-h-svh">
       <div className="flex flex-col items-center justify-center gap-4">

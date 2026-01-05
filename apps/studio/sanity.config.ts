@@ -2,7 +2,6 @@ import {defineConfig, defineField} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './src/schemaTypes'
-import {iconPicker} from 'sanity-plugin-icon-picker'
 import {fieldLevelExperiments} from '@sanity/personalization-plugin'
 
 import {structure} from './src/structure'
@@ -17,7 +16,6 @@ export default defineConfig({
   plugins: [
     structureTool({structure}),
     visionTool(),
-    iconPicker(),
     fieldLevelExperiments({
       // field types that you want to be able to emperiment on
       fields: ['string'],

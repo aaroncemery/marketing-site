@@ -1,0 +1,9 @@
+*[_type == 'movie'] {
+  _id,
+  _type,
+  castMembers[]{
+    person-> {
+      name,
+    }
+  },
+}
